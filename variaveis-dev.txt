@@ -1,0 +1,3 @@
+env=prod
+db_user=dev
+db_pass=pass_dev
