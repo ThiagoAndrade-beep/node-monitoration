@@ -7,8 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          pwd
-          ls
+          ls ..
           if [ ${{ github.ref_name }} = main ] 
           then
               cat ../variaveis-prod.txt
