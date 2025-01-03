@@ -25,6 +25,7 @@ jobs:
 
   My-New-Job:
     runs-on: ubuntu-latest
+    needs: Explore-GitHub-Actions
     steps:
       - run: echo "Executing my new job with my steps"
 
