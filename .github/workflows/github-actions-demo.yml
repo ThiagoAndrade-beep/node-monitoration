@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          if [ ${{ github.ref_name }} -eq "main" ] 
+          if [ ${{ github.ref_name }} -eq main ] 
           then
               echo "farei deploy no ambiente de producao"
           else
