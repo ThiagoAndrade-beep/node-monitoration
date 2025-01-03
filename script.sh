@@ -1,7 +1,9 @@
 #!/bin/bash 
 
+BRANCH=$1
+
 ls -lh
-if [ ${{ github.ref_name }} = main ] 
+if [ $BRANCH = main ] 
 then
     cat variaveis-prod.txt
 else
