@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-BRANCH=$2
+BRANCH=$1
 
 ls -lh
 if [ $BRANCH = main ] 
