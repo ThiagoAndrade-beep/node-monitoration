@@ -1,3 +1,0 @@
-env=prod
-db_user=prod
-db_pass=pass_prod
