@@ -1,31 +1,27 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: TEST - Manual Approval for Migration (Environment)
 
-on: 
-  push:
-    branches:
-      - 'main'
+on:
+  workflow_dispatch:
 
 jobs:
-  Explore-GitHub-Actions:
+  deploy-simulated:
+    name: Deploy (simulado)
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: ./script.sh ${{ github.ref_name }}
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - name: Deploy simulation
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          echo "✅ Deploy simulado iniciando..."
+          sleep 8
+          echo "✅ Deploy simulado finalizado."
 
-  My-New-Job:
+  migration-simulated:
+    name: Migration (simulado) - requer aprovação
+    needs: deploy-simulated
     runs-on: ubuntu-latest
-    needs: Explore-GitHub-Actions
+    environment: migration-test
     steps:
-      - run: echo "Executing my new job with my steps"
-
+      - name: Migration simulation
+        run: |
+          echo "🚀 Migration simulado iniciando..."
+          sleep 8
+          echo "✅ Migration simulado finalizado."
