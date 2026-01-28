@@ -28,4 +28,4 @@ jobs:
         run: |
           echo "🚀 Migration simulado iniciando..."
           sleep 8
-          echo "✅ Migration simulado finalizado."
+          echo "✅ Migration simulado finalizado.g"
