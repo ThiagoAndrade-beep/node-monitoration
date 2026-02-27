@@ -1,15 +1,11 @@
-name: TEST - Manual Approval on PR (Environment)
+name: TEST - Manual Approval for Migration (Environment)
 
 on:
-  pull_request:
-    types: [closed]
-    branches:
-      - dev
+  workflow_dispatch:
 
 jobs:
   deploy-simulated:
     name: Deploy (simulado)
-    if: ${{ github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy simulation
@@ -28,4 +24,4 @@ jobs:
         run: |
           echo "🚀 Migration simulado iniciando... teste"
           sleep 8
-          echo "✅ Migration simulado finalizado.g"
+          echo "✅ Migration simulado finalizado."
