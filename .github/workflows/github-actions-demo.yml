@@ -22,6 +22,6 @@ jobs:
     steps:
       - name: Migration simulation
         run: |
-          echo "🚀 Migration simulado iniciando..."
+          echo "🚀 Migration simulado iniciando... teste"
           sleep 8
           echo "✅ Migration simulado finalizado."
