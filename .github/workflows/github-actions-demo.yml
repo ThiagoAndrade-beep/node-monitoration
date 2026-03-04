@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Test Pipeline Migration
 
 on:
@@ -8,20 +7,9 @@ on:
 
 jobs:
   build:
-=======
-name: TEST - Manual Approval for Migration (Environment)
-
-on:
-  workflow_dispatch:
-
-jobs:
-  deploy-simulated:
-    name: Deploy (simulado)
->>>>>>> 4fa67879051e8c36d090d87599c2e377a8acd379
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -84,22 +72,3 @@ jobs:
    # steps:
    #   - run: echo "Executing my new job with my steps"
 
-=======
-      - name: Deploy simulation
-        run: |
-          echo "✅ Deploy simulado iniciando..."
-          sleep 8
-          echo "✅ Deploy simulado finalizado."
-
-  migration-simulated:
-    name: Migration (simulado) - requer aprovação
-    needs: deploy-simulated
-    runs-on: ubuntu-latest
-    environment: migration-test
-    steps:
-      - name: Migration simulation
-        run: |
-          echo "🚀 Migration simulado iniciando... teste"
-          sleep 8
-          echo "✅ Migration simulado finalizado."
->>>>>>> 4fa67879051e8c36d090d87599c2e377a8acd379
