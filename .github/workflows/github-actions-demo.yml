@@ -15,7 +15,7 @@ jobs:
 
       - name: Build
         run: |
-          echo "🔧 Rodando build..."
+          echo "🔧 Rodando build... (alteração que vai dev com o migrate)"
           sleep 3
 
   deploy:
@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          echo "🚀 Rodando deploy..."
+          echo "🚀 Rodando deploy... (alteração que vai dev com o migrate)"
           sleep 3 
   migrate:
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
     steps:
       - name: Run Migration
         run: |
-          echo "🗄️ Rodando migration..."
+          echo "🗄️ Rodando migration... (alteração que vai dev com o migrate)"
           sleep 5
 
 
